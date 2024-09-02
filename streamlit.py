@@ -5,10 +5,7 @@ import numpy as np
 import gdown
 import os
 
-file_id = '1-AQGIP_4wIGacaTcHmNg0WdbzvXFwk8W'
-url = f'https://drive.google.com/uc?id={file_id}'
-output = 'my_model.h5'
-gdown.download(url, output, quiet=False, use_cookies=False)
+
 model = tf.keras.models.load_model('my_model.h5')
 
 mclass = ['Corn: Common Rust',
